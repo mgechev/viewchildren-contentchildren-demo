@@ -1,0 +1,22 @@
+button {
+  background-color: #106cc8;
+  border-style: none;
+  color: rgba(255, 255, 255, 0.87);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 40px;
+  padding: 8px 18px;
+  text-decoration: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: San Francisco Text;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  color: #777;
+}
