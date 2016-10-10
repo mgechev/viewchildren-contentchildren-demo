@@ -68,7 +68,7 @@ export class TodoInputComponent {
 }
 
 @Component({
-  selector: 'todo-footer',
+  selector: 'app-footer',
   template: '<ng-content></ng-content>'
 })
 export class FooterComponent {
@@ -77,6 +77,7 @@ export class FooterComponent {
 
 @Component({
   selector: 'todo-app',
+  viewProviders: [TodoList],
   template: `
     <section>
       Add todo:
@@ -87,7 +88,7 @@ export class FooterComponent {
       <todo-item *ngFor="let todo of todos.getAll()" [todo]="todo">
       </todo-item>
     </section>
-    <ng-content select="todo-footer"></ng-content>
+    <ng-content select="app-footer"></ng-content>
   `
 })
 export class TodoAppComponent {
@@ -108,13 +109,12 @@ export class TodoAppComponent {
   styles: [
     'todo-app { margin-top: 20px; margin-left: 20px; }'
   ],
-  providers: [TodoList],
   template: `
     <content>
       <todo-app>
-        <todo-footer>
+        <app-footer>
           <small>Yet another todo app!</small>
-        </todo-footer>
+        </app-footer>
       </todo-app>
     </content>
   `
